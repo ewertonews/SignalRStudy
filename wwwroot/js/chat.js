@@ -30,6 +30,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     var message = document.getElementById("messageInput").value;
     console.log("Message: ", message);
 
+    //________________ Nome do método definido no ChatHub.cs
     connection.invoke("sendMessage", user, message).catch(function (err) {
         console.log("Deu errado :/");
         return console.error(err.toString());
